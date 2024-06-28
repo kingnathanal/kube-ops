@@ -1,0 +1,30 @@
+apiVersion: networking.istio.io/v1
+kind: Gateway
+metadata:
+  name: ingress-gateway
+  namespace: istio-ingress
+spec:
+  selector:
+    istio: ingress
+  servers:
+  - port:
+      number: 80
+      name: http280
+      protocol: HTTP2
+    hosts:
+    - '*.app.williambrittonjr.com'
+    - '*.kube.hyyercode.com'
+  - port:
+      number: 9080
+      name: http29080
+      protocol: HTTP2
+    hosts:
+    - '*.app.williambrittonjr.com'
+    - '*.kube.hyyercode.com'
+  - port:
+      number: 8080
+      name: http28080
+      protocol: HTTP2
+    hosts:
+    - '*.app.williambrittonjr.com'
+    - '*.kube.hyyercode.com'
