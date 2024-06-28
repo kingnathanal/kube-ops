@@ -9,6 +9,6 @@ spec:
     image: jrecord/nettools:latest
     command:
       - sleep
-      - "3600"
+      - "infinity"
     imagePullPolicy: IfNotPresent
   restartPolicy: Never
